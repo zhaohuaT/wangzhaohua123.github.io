@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "SESSSION COOKIE详情"
+date:   2016-05-12 22:02:01 -0500
+categories: jekyll
+tags: SESSION COOKIE
+excerpt: 1.cookie 是一种发送到客户浏览器的文本串句柄，并保存在客户机硬盘上，可以用来在某个WEB站点会话间持久的保持数据。
+---
+
+1.cookie 是一种发送到客户浏览器的文本串句柄，并保存在客户机硬盘上，可以用来在某个WEB站点会话间持久的保持数据。
+
+ 
+
+2.session其实指的就是访问者从到达某个特定主页到离开为止的那段时间。 Session其实是利用Cookie进行信息处理的，当用户首先进行了请求后，服务端就在用户浏览器上创建了一个Cookie，当这个Session结束时，其实就是意味着这个Cookie就过期了。
+注：为这个用户创建的Cookie的名称是aspsessionid。这个Cookie的唯一目的就是为每一个用户提供不同的身份认证。
+
+cookie 和session 的区别：
+
+1、cookie数据存放在客户的浏览器上，session数据放在服务器上。
+
+2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗
+   考虑到安全应当使用session。
+
+3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能
+   考虑到减轻服务器性能方面，应当使用COOKIE。
+
+4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。
+
+5、所以个人建议：
+   将登陆信息等重要信息存放为SESSION
+   其他信息如果需要保留，可以放在COOKIE中
+
+
+搜索  搜索后高亮显示
+<pre><code>
+        foreach($arr as $k=>$v)
+        {
+            $arr[$k]['c_name']=str_replace("$check","<font color='#00ffff'>$check</font>",$v['c_name']);
+            $arr[$k]['u_name']=str_replace("$check1","<font color='red'>$check1</font>",$v['u_name']);
+        }
+</code></pre>
+
+
+
+
